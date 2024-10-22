@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { NavbarItems } from "../data/navbarItems"
+import { NavbarItems } from "../components/NavbarItems/navbarItems"
 import SearchBar from "./SearchBar"
 import { motion, useAnimation } from "framer-motion"
 
