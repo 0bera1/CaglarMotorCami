@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Life hack",
+      "description": "How to park your car at your garage?",
+      "galeri":1
+    },
+    {
+      "id": 2,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure",
+      "description": "Explore the wild side of nature.",
+      "galeri":1
+
+    },
+    {
+      "id": 3,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure2",
+      "description": "Explore the wild side of nature.",
+      "galeri":2
+
+    },
+    {
+      "id": 4,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure",
+      "description": "Explore the wild side of nature.",
+      "galeri":1
+
+    },
+    {
+      "id": 5,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure",
+      "description": "Explore the wild side of nature.",
+      "galeri":1
+
+    },
+    {
+      "id": 6,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure",
+      "description": "Explore the wild side of nature.",
+      "galeri":1
+
+    },
+    {
+      "id": 7,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "222Adventure",
+      "description": "Explore the wild side of nature.",
+      "galeri":2
+
+    },
+    {
+      "id": 8,
+      "imageSrc": "https://i.pinimg.com/564x/1c/11/92/1c119213485d12e420e0a0b119a300cd.jpg",
+      "title": "Adventure",
+      "description": "Explore the wild side of nature.222",      
+      "galeri":2
+
+    }
+  ]
+  
