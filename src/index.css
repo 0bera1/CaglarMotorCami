@@ -2,3 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Noktaların varsayılan rengini değiştir */
+.slick-dots li button {
+    background: gray; /* Pasif noktalar için arka plan rengi */
+    opacity: 0.5; /* Pasif noktalar için opaklık */
+  }
+  
+  /* Aktif noktanın rengini değiştir */
+  .slick-dots li.slick-active button {
+    background: yellowgreen; /* Aktif nokta için arka plan rengi */
+    opacity: 1; /* Aktif nokta için tam opaklık */
+  }
+  
+  /* Noktaların boyutunu değiştirmek istersen */
+  .slick-dots li button {
+    width: 10px; /* Nokta genişliği */
+    height: 10px; /* Nokta yüksekliği */
+    border-radius: 50%; /* Daire şeklinde yapmak için */
+    margin-top: 30px; /* Noktaların üst boşluğu */
+  }
+  
+  /* İstersen noktaların arasındaki boşluğu ayarlayabilirsin */
+  .slick-dots li {
+    margin:  8px; /* Noktalar arasındaki boşluk */
+  }
+  

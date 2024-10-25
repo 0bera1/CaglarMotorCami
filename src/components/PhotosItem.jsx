@@ -1,6 +1,6 @@
 const PhotosItem = ({ imageSrc, title, description }) => {
     return (
-        <div className="card glass w-96  bg-gray-400 shadow-xl ">
+        <div className="card glass w-96  bg-gray-800 shadow-2xl  ">
             <figure>
                 <img src={imageSrc} alt={title} />
             </figure>
@@ -8,7 +8,7 @@ const PhotosItem = ({ imageSrc, title, description }) => {
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Learn now!</button>
+                    <button className="btn mt-7 shadow-xl hover:text-yellow-400 ">Learn now!</button>
                 </div>
             </div>
         </div>

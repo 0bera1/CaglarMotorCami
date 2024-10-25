@@ -1,0 +1,34 @@
+
+  
+
+  @keyframes growSlideUp {
+    0% {
+      transform: translateY(30px) scale(0.9); /* Aşağıdan gelir ve küçüktür */
+      opacity: 0; /* Görünmez */
+    }
+    100% {
+      transform: translateY(0) scale(1); /* Normal konuma gelir ve normal boyut */
+      opacity: 1; /* Tamamen görünür hale gelir */
+    }
+  }
+  
+  .grow-slide-up {
+    animation: growSlideUp 1s ease forwards; /* Animasyonu uygula */
+  }
+  
+  
+  @keyframes tstBera {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.5); /* Başlangıçta daha büyük */
+    opacity: 0; /* Tamamen görünmez */
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1); /* Normal boyutuna döner */
+    opacity: 1; /* Tamamen görünür hale gelir */
+  }
+}
+  
+  .tstBera {
+    animation: tstBera 1.5s ease-out forwards; /* Kombine animasyon */
+  }
+

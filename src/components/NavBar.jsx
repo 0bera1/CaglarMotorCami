@@ -1,77 +1,66 @@
 import { useEffect } from "react";
-import { NavbarItems } from "../components/NavbarItems/navbarItems"
-import SearchBar from "./SearchBar"
-import { motion, useAnimation } from "framer-motion"
+import { NavbarItems } from "../components/NavbarItems/navbarItems";
+import SearchBar from "./SearchBar";
+import { motion, useAnimation } from "framer-motion";
+import { FaMotorcycle } from "react-icons/fa"; // Motor simgesi
+import { BsFillTelephoneFill } from "react-icons/bs"; // Telefon simgesi
 
 const NavBar = () => {
   const controls = useAnimation();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // önce opacity'yi değiştir.
       controls
         .start({
           opacity: 0,
-          transition: { duration: 1 }
+          transition: { duration: 0.5 },
         })
         .then(() => {
-          // Sonra opacity'yi geri al.
           controls.start({
             opacity: 1,
-            transition: { duration: 1 }
+            transition: { duration: 0.5 },
           });
         });
-    }
-      , 2000);
+    }, 2000);
+
     return () => clearInterval(interval);
   }, [controls]);
 
   const handleSearch = (query) => {
-    console.log("Arama sorgusu: ", query); // Arama sorgusunu kullanabilirsiniz
+    console.log("Arama sorgusu: ", query);
   };
+
   return (
     <>
-      <div className="navbar bg-base-200 ">
-        <div className="navbar-start">
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-          </svg>
-          {/* Logo */}
-          <a className="btn btn-ghost text-xl">Logo</a>
+      <div className="navbar bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg relative">
+        <div className="navbar-start flex items-center">
+          <FaMotorcycle className="h-8 w-8 text-yellow-400 animate-bounce mt-2 ml-4" /> {/* Motor simgesi */}
+          <a className="btn bg-transparent ml-4 text-yellow-400 text-xl rounded-full hover:bg-yellow-400 hover:text-white shadow-lg transition duration-300">
+            Logo
+          </a>
         </div>
         <div className="navbar-center z-30">
           <SearchBar onSearch={handleSearch} />
         </div>
-        <div className="navbar-end"
-          style={{ zIndex: 1 }}>
-
+        <div className="navbar-end" style={{ zIndex: 1 }}>
           <NavbarItems />
         </div>
       </div>
-      {/* Telefon numarası kısmı */}
-      {/* <div className="text-center bg-base-200 ">
-        <a href="tel:+1234567890" className="text-blue-500 hover:underline animate-slide">
-          +12 345 678 90
-        </a>
-      </div> */}
-      <div className="  text-center bg-base-200 relative  after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 pb-1 cursor-pointer">
+      <div className="text-center bg-gradient-to-r  from-gray-900 via-gray-800 to-gray-900 relative after:bg-yellow-400 after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-500 pb-1 cursor-pointer">
         <motion.a
-          href="tel:+905317771863"
-          className="text-slate-900 text-lg  font-extralight"
+          href="tel: +905317771863"
+          className="flex items-center justify-center text-yellow-400 text-xl shadow-lg font-thin transition-transform transform hover:scale-110"
           style={{ zIndex: -1 }}
-          initial={{ opacity: 0 }} // Sağdan başlar
+          initial={{ opacity: 0 }}
           animate={controls}
-          transition={{ duration: 0.5 }} // Animasyon süresi
+          transition={{ duration: 0.5 }}
         >
-          +90 (531) 777 18 63
+          <BsFillTelephoneFill className="mr-2" /> {/* Telefon simgesi */}
+          Tel: +90 (531) 777 18 63
         </motion.a>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavBar
-
+export default NavBar;
