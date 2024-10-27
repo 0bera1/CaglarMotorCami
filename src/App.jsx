@@ -11,15 +11,13 @@ import bg from "../public/bg.webp";
 
 function App() {
   return (
-    <div className="bg-gradient-to-b  from-gray-900 via-gray-800 to-gray-950 min-h-screen ">
-      {" "}
-      {/* Animasyon sınıfı eklendi */}
+    <div className="h-screen w-screen bg-gradient-to-b  from-gray-900 via-gray-800 to-gray-950  ">
       <NavBar />
       <main
         className="tstBera"
         style={{
           backgroundImage: `url(${bg})`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}

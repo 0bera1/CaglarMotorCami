@@ -53,12 +53,12 @@ const Contact = () => {
           </form>
         </motion.div>
         <motion.div
-          className="flex-1"
+          className="flex-1 h-96"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-full h-64 sm:h-80 lg:h-96 ">
+          <div className="w-full h-96 sm:h-80 lg:h-[540px] ">
             {" "}
             {/* Responsive height ayarı */}
             <MapContainer />

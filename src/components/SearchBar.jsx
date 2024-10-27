@@ -6,7 +6,7 @@ const SearchBar = ({ onSearch }) => {
     };
   
     return (
-      <label className="input bg-slate-700 flex items-center shadow-lg gap-2 ">
+      <label className="input bg-slate-700 flex items-center shadow-lg max-w-md ">
         <input 
           type="text" 
           className="grow px-4 py-2 focus:outline-none  text-yellow-400" 

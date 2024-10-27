@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { NavbarItems } from "../components/NavbarItems/navbarItems";
-import SearchBar from "./SearchBar";
 import { motion, useAnimation } from "framer-motion";
 import { FaMotorcycle } from "react-icons/fa"; // Motor simgesi
 import { BsFillTelephoneFill } from "react-icons/bs"; // Telefon simgesi
@@ -26,9 +25,7 @@ const NavBar = () => {
     return () => clearInterval(interval);
   }, [controls]);
 
-  const handleSearch = (query) => {
-    console.log("Arama sorgusu: ", query);
-  };
+ 
 
   return (
     <>
@@ -39,9 +36,7 @@ const NavBar = () => {
             Logo
           </a>
         </div>
-        <div className="navbar-center z-30">
-          <SearchBar onSearch={handleSearch} />
-        </div>
+
         <div className="navbar-end" style={{ zIndex: 1 }}>
           <NavbarItems />
         </div>
