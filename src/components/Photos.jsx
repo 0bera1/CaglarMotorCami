@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import PhotosItem from "./PhotosItem";
 import { motion } from "framer-motion";
 import SearchBar from "./SearchBar";
-import { div } from "framer-motion/client";
 
 const Photos = () => {
   const [cards, setCards] = useState([]);

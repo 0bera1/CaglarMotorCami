@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
-import { Link } from "react-scroll"; 
+import { Link } from "react-scroll";
 
 export const navItems = [
   {
@@ -12,11 +12,6 @@ export const navItems = [
     id: 2,
     text: "Fotoğraflar",
     to: "fotoğraflar",
-    subItems: [
-      { id: 1, text: "Galeri 1", to: "galeri1" },
-      { id: 2, text: "Galeri 2", to: "galeri2" },
-    ],
-    icon: "▼",
   },
   {
     id: 3,
@@ -38,7 +33,7 @@ export const NavbarItems = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-4 py-2 text-black ">
+    <div className="flex justify-between items-center px-4 py-2 text-black">
       {/* Desktop Navigation */}
       <div className="hidden md:flex">
         <ul className="menu menu-horizontal px-1 shad">
@@ -49,33 +44,9 @@ export const NavbarItems = () => {
               to={item.to}
               className="group relative text-gray-400 font-bold pr-3 m-2 cursor-pointer duration-300 hover:text-yellow-400"
             >
-              {item.subItems ? (
-                <>
-                  <a
-                    href={`/${item.to}`}
-                    className="flex items-center cursor-pointer "
-                  >
-                    {item.text}
-                    {item.icon && <span className="ml-2">{item.icon}</span>}
-                  </a>
-                  <ul className="p-2 bg-base-100 absolute top-full left-0 shadow-lg hidden group-hover:block w-40">
-                    {item.subItems.map((subItem) => (
-                      <li key={subItem.id} className=" whitespace-nowrap">
-                        <a
-                          href={`/${subItem.to}`}
-                          className="block px-4 py-2 rounded-lg hover:bg-yellow-950"
-                        >
-                          {subItem.text}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <a href={`/${item.to}`} className="flex items-center">
-                  {item.text}
-                </a>
-              )}
+              <a href={`/${item.to}`} className="flex items-center">
+                {item.text}
+              </a>
             </Link>
           ))}
         </ul>
